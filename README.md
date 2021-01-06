@@ -1,7 +1,7 @@
 
 <h1 align="center" > 
 <a> 
-  <img src="https://github.com/JeanBarbosa/csv-viewer/blob/master/screenshot/modal.png" width="600"/>
+  <img src="https://github.com/JeanBarbosa/csv-viewer/blob/develop/screenshot/modal.png" width="600"/>
 </a>
 </h1>
 
