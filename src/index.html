@@ -5,11 +5,24 @@
   <meta charset="UTF-8">
   <title>CSV Viewer</title>
   <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  <link rel="stylesheet" href="styles/formbox.css">
 
 </head>
 
 <body>
-  <h1>Hello World!</h1>
+
+  <div class="title">
+    <h1>CSV Viewer</h1>
+  </div>
+
+  <p id="selected-file"></p>
+
+  <form>
+    <input type="file" multiple>
+    <p>Arraste seus arquivos aqui ou clique nesta área.</p>
+    <button id="select-directory" type="button">Upload</button>
+  </form>
+
 </body>
 
 </html>

@@ -10,7 +10,7 @@ const createWindow = () => {
   });
 
   win.loadFile('src/index.html');
-
+  win.webContents.toggleDevTools();
 }
 
 app.whenReady().then(createWindow);
