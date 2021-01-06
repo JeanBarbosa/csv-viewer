@@ -3,6 +3,7 @@ const fs = require('fs');
 const results = [];
 const { ipcRenderer } = require('electron');
 const selectDirBtn = document.getElementById('select-directory');
+const modal = require('./modal');
 
 selectDirBtn.addEventListener('click', (event) => {
   ipcRenderer.send('open-file-dialog');
@@ -17,7 +18,7 @@ ipcRenderer.on('selected-directory', (event, path) => {
       .pipe(csv())
       .on('data', (data) => results.push(data))
       .on('end', () => {
-        console.log(results);
+        modal(results);
       });
   }
 });
