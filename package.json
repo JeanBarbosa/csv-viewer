@@ -9,6 +9,7 @@
   "author": "Jean Barbosa <programmer.jean@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "csv-parser": "^3.0.0",
     "electron": "^11.1.1"
   }
 }
