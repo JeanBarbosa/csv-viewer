@@ -1,25 +1,29 @@
 const csv = require('csv-parser');
 const fs = require('fs');
-const results = [];
-const { ipcRenderer } = require('electron');
-const selectDirBtn = document.getElementById('select-directory');
 const modal = require('./modal');
+const selectDirBtn = document.getElementById('select-directory');
+const { ipcRenderer } = require('electron');
 
 const getFile = (filePath) => {
+
+  const results = [];
+
+  const parser = (path) => {
+    fs.createReadStream(path)
+      .pipe(csv())
+      .on('data', (data) => results.push(data))
+      .on('end', () => {
+        modal(results);
+      });
+  }
+
   if (Array.isArray(filePath)) {
-    fs.createReadStream(filePath[0])
-      .pipe(csv())
-      .on('data', (data) => results.push(data))
-      .on('end', () => {
-        modal(results);
-      });
+
+    filePath.map(file => {
+      parser(file);
+    })
   } else {
-    fs.createReadStream(filePath)
-      .pipe(csv())
-      .on('data', (data) => results.push(data))
-      .on('end', () => {
-        modal(results);
-      });
+    parser(filePath);
   }
 }
 
