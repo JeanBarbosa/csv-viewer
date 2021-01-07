@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSV Viewer</title>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  <link rel="stylesheet" href="../styles/formbox.css">
+
+</head>
+
+<body>
+
+  <div class="title">
+    <h1>CSV Viewer</h1>
+  </div>
+
+  <!-- <p id="selected-file"></p> -->
+
+  <form enctype="multipart/form-data">
+    <p>Arraste seus arquivos aqui ou clique nesta área.</p>
+    <button id="select-directory" type="button">Upload</button>
+  </form>
+
+  <script type="text/javascript">
+    require('../csv')
+  </script>
+
+</body>
+
+</html>
