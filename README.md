@@ -29,7 +29,7 @@
 </p>
 
 # CSV-Viewer
- Visualizador de arquivos csv (Desafio Mesha)
+ Visualizador de arquivos csv
 
   Como proposta pessoal resolvi desenvolver em electron (node, html e js) essa
   aplicação multiplataforma para demostra minha versatilidade no quesito fullstack
