@@ -15,10 +15,6 @@
 
 <p align="center">
 
-  <a target="_blank"  href ="https://telzir.com.br">
-    <img alt="Made by Telzir" src="https://img.shields.io/badge/made%20by-csv-viewer-%2304D361">
-  </a>
-
   <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361">
 
   <a target="_blank"  href ="https://github.com/jeanbarbosa/csv-viewer/stargazers">
